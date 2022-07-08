@@ -1,0 +1,37 @@
+package patika;
+
+import java.util.Scanner;
+
+public class Test
+{
+			
+		    public static void main(String[] args) {
+		    	
+		    	double amount;
+    		    double percentage;
+    		    double amountWithKDV;
+    		    double kdvAmount;
+    		    
+		    	Scanner scn = new Scanner(System.in);
+		    	
+		    	System.out.print("Para miktarını giriniz:");
+		    	amount = scn.nextDouble();
+		    	 
+		    	if(amount>0 && amount<=1000) {
+		    		percentage = 0.18;
+		    	}else {
+		    		percentage = 0.8;
+		    	}
+		    	
+		    	kdvAmount = amount * percentage;
+		    	amountWithKDV = amount + kdvAmount;
+		    			    			  
+		    	System.out.println("KDV'siz Fiyat=" + amount);
+		    	System.out.println("KDV'li Fiyat=" + amountWithKDV);
+		    	System.out.println("KDV Tutarı=" + kdvAmount);
+
+		    	
+		    	scn.close();
+		    }
+			
+}
