@@ -1,0 +1,56 @@
+package patika;
+
+import java.util.Scanner;
+
+public class Test
+{
+			
+		    public static void main(String[] args) {
+		    	
+		    	int edge1, edge2, edge3;
+    		    
+		    	
+		    	Scanner scn = new Scanner(System.in);
+		    	
+		    	System.out.print(" 1.kenar değerini giriniz:");
+		    	edge1 = scn.nextInt();
+		    	
+		    	System.out.print(" 2.kenar değerini giriniz:");
+		    	edge2 = scn.nextInt();
+		    	
+		    	System.out.print(" 3.kenar değerini giriniz:");
+		    	edge3 = scn.nextInt();
+		    	System.out.println("Üçgeni alanı:" + findArea(edge1, edge2, edge3));
+		    	
+		    	System.out.print(" 1. Dik kenar değerini giriniz:");
+		    	edge1 = scn.nextInt();
+		    	System.out.print(" 2.Dik kenar değerini giriniz:");
+		    	edge2 = scn.nextInt();
+		    	System.out.println("Hipotenüs uzunluğu:" + findHipo(edge1, edge2));
+		    			  		 	 
+		    	scn.close();
+		    }
+		    
+		    public static double findHipo(int edge1, int edge2) {
+		    	
+		    	int i = (edge1*edge1) + (edge2* edge2);
+		    	return Math.sqrt(i);
+		    	
+		    }
+		    
+		    public static double findArea(int edge1, int edge2, int edge3){
+		    	
+		    	double u;
+		    	
+		    	double area;
+		    	
+		    	u = (edge1 +edge2 +edge3)/2;
+		    	area = Math.sqrt(u*(u-edge1)*(u-edge2)*(u-edge3));
+		    			    	
+		    	return  area;
+	
+		    }
+		    
+		    
+			
+}
