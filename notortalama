@@ -1,0 +1,44 @@
+package patika;
+
+import java.util.Scanner;
+
+public class Test
+{
+			
+		    public static void main(String[] args) {
+		    	
+		    	int java, mat, phy, chem, tur, hist, music;
+    		    int avg;	
+		    	Scanner scn = new Scanner(System.in);
+		    	
+		    	System.out.print("Java dersi notunuzu giriniz:");
+		    	java = scn.nextInt();
+		    	
+		    	System.out.print("Matematik dersi notunuzu giriniz:");
+		    	mat = scn.nextInt();
+		    	
+		    	System.out.print("Fizik dersi notunuzu giriniz:");
+		    	phy = scn.nextInt();
+		    	
+		    	System.out.print("Kimya dersi notunuzu giriniz:");
+		    	chem = scn.nextInt();
+		    	
+		    	System.out.print("Türkçe dersi notunuzu giriniz:");
+		    	tur = scn.nextInt();
+		    	
+		    	System.out.print("Tarih dersi notunuzu giriniz:");
+		    	hist = scn.nextInt();
+		    	
+		    	System.out.print("Müzik dersi notunuzu giriniz:");
+		    	music = scn.nextInt();
+		    	
+		    	avg = (java+mat+phy+chem+tur+hist+music)/7;
+		    	
+		    	System.out.println();
+		    	System.out.println("Not ortalamanız:" + avg );
+		    	System.out.println(avg > 60 ? "Sınıfı Geçti" : "Sınıfta Kaldı");
+		    			    	
+		    	scn.close();
+		    }
+			
+}
