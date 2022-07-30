@@ -1,0 +1,55 @@
+.logo{
+    margin-top: 10px;
+    width:340px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.txt-search{
+    margin-left: 30%;
+    margin-right: auto;
+    width: 40%;
+}
+p{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.search-bar{
+    height: 70px;
+    background-color:rgb(193, 193, 193);
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button{
+margin-left: auto;
+margin-right: auto;
+width:80%;
+background-color:rgb(193, 193, 193);
+   
+}
+
+
+#btn1{
+    margin-left: 37%;
+   
+}
+
+.boxes{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80px;
+
+}
+.box{
+    width: 32%;
+    height: 80px;
+    background-color:rgb(117, 198, 255);
+    float: left;
+
+    margin-left: 5px;
+
+}
