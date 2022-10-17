@@ -1,0 +1,90 @@
+package test;
+
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Book implements Comparable<Book> {
+	
+	private String name;
+	private int pageSize;
+	public int getPageSize() {
+		return pageSize;
+	}
+
+	public void setPageSize(int pageSize) {
+		this.pageSize = pageSize;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	@Override
+	public int compareTo(Book b) {
+		return this.name.compareTo(b.name);
+	
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public static void main(String[] args) {
+		
+		Book b1 = new Book();
+		Book b2 = new Book();
+		Book b3 = new Book();
+		Book b4 = new Book();
+		Book b5 = new Book();
+		
+		b1.setName("Hasan");
+		b2.setName("Ali");
+		b3.setName("Zeynep");
+		b4.setName("Şule");
+		b5.setName("Gökhan");
+		
+		b1.setPageSize(10);
+		b2.setPageSize(20);
+		b3.setPageSize(30);
+		b4.setPageSize(40);
+		b5.setPageSize(50);
+		
+		
+		Set<Book> set1 =new TreeSet<>();
+		set1.add(b1);
+		set1.add(b2);
+		set1.add(b3);
+		set1.add(b4);
+		set1.add(b5);
+		
+		Comparator<Book> comparator = new Comparator<>() {
+
+			@Override
+			public int compare(Book o1, Book o2) {
+				return Integer.compare(o1.getPageSize(), o2.getPageSize());
+				
+			}};
+			
+		Set<Book> set2 = new TreeSet<>(comparator);
+		
+		set2.add(b1);
+		set2.add(b2);
+		set2.add(b3);
+		set2.add(b4);
+		set2.add(b5);
+		
+		for(Book b : set1) {
+			System.out.println(b.getName());
+		}
+		System.out.println("-----------------");
+		for(Book b : set2) {
+			System.out.println(b.getName());
+		}
+
+	}
+
+
+
+}
