@@ -1,0 +1,62 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+public class Fikstur {
+	
+	public static void main(String[] args) {
+		
+		List<String> teams = new ArrayList<>();
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Please enter the team num:");
+		int teamCount = scan.nextInt();
+		
+		if(teamCount%2 != 0) {
+			teams.add("BAY");
+		}
+		
+		for(int i = 0; i < teamCount; i++) {
+			
+			System.out.println("Please enter a team:");
+			String team = scan.next();
+			teams.add(team);
+			
+		}
+		Map<String,String> matches = new TreeMap<>();
+		
+		for(int i = 0; i < teams.size(); i++) {
+		
+			String team = teams.get(i);
+			int num = 0;
+			for(int j = 0; j < teams.size(); j++) {
+				
+				
+				String match ="";
+				
+				if(i!=j) {
+					
+					num++;
+					match = team + "vs" + teams.get(j);
+					matches.put((num + team), match);
+					
+				}
+				
+			}
+			
+		}
+		
+		for(String s : matches.keySet()) {
+			System.out.println(matches.get(s));
+		}
+		
+
+		
+	}
+
+}
